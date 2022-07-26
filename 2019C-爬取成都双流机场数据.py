@@ -2,10 +2,12 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 url = 'https://www.cdairport.com/dynamic3.aspx'
-path = r'D:\Learning\数模\2022高教杯\第三次培训\数据\airplane.xlsx' # 将此路径改为你的本地路径
+path = r'..\airplane.xlsx' # 将此路径改为你的本地保存路径
 headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71'}
 Info = []
-for i in range(1,42):
+start_page = 1
+end_page = 42
+for i in range(start_page,end_page):
     params = {
     't':'8',
     'inout':'a',
